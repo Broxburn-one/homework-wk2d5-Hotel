@@ -7,14 +7,25 @@ require_relative('../room')
 class BookingTest < MiniTest::Test
 
   def setup 
-    # @guest_1 = Guest.new({room_type: 'single', has_guest: false})
-    # @guest_2 = Guest.new({room_type: 'double', has_guest: true})
+    #  dates are bookings
+    @room_1 = Room.new({room_type: 'single', rate: 35, dates_booked: ['2016-02-26', '2016-02-27', '2016-02-28']})
+    @room_2 = Room.new({room_type: 'single', rate: 35, dates_booked: []})
+    @room_3 = Room.new({room_type: 'single',  rate: 35, dates_booked: ['2016-02-29', '2016-03-01', '2016-03-03']})
+    @room_4 = Room.new({room_type: 'double',  rate: 70, dates_booked: ['2016-02-26', '2016-02-27', '2016-02-28']})
+    @room_5 = Room.new({room_type: 'double',  rate: 70, dates_booked: ['2016-02-26', '2016-02-27', '2016-02-28', '2016-03-02', '2016-03-04']})
+    @room_6 = Room.new({room_type: 'double',  rate: 70, dates_booked: []})
+
+    #  guests
     @guest_1 = Guest.new({name: 'Fred Mertz', contact: '0141-222-2332'})
     @guest_2 = Guest.new({name: 'Ethel Mertz', contact: '0141-222-2332'})
     @guest_3 = Guest.new({name: 'Curly', contact: '0121-222-2332'})
     @guest_4 = Guest.new({name: 'Moe', contact: '01223-222-2332'})
 
     @booking_1 = Booking.new({guests: [@guest_1, @guest_2], room_no: 6, checkin_date: '2016-03-03', checkout_date: '2016-03-05'})
+
+
+
+
   end
 
   def test_booked_in_guests
@@ -31,6 +42,10 @@ class BookingTest < MiniTest::Test
 
   def test_get_checkout_date
     assert_equal('2016-03-05', @booking_1.checkout_date)
+  end
+
+  def test_find_first_free_room
+    assert_equal()
   end
 
 end 

@@ -38,6 +38,57 @@ hotel, bookings, rooms, customers
 
 checkin and checkout dates are a hash
 
+=====
+
+MAKE BOOKING
+
+test 1  find first room with dates available on requested booking date
+  --> loop through the rooms; return free room nr
+
+test 2: make booking on above free room
+  parameter requires u to enter room nr
+  --> update the room matrix
+  
+  
+
+
+
+
+
+
+1. check dates free  -> fail
+2. check dates free  -> pass
+3. make booking
+4. count days booked
+5. output cost of stay
+
+
+
+
+Kitty:
+
+1. loop through each booking up to today's date, 
+    list nr days booked and calculate the total for that booking.
+2. do grand sum to date.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

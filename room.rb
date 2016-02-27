@@ -1,14 +1,15 @@
 class Room
   attr_reader :rate, :dates_booked, :room_type
-  def initialize(room_type, room_rate=35, dates_booked)
-    @room_type = 'single'
-    @rate = room_rate
-    @dates_booked = dates_booked
+  # def initialize(room_type, room_rate=35, dates_booked)
+  def initialize(params)
+    @room_type = params[:single]
+    @rate = params[:rate]
+    @dates_booked = params[:dates_booked]
   end
 
-  def check_room_rate
-    return @rate
-  end
+  # def check_room_rate
+  #   return @rate
+  # end
 
   def room_free_on_dates(dates_to_check)
     #  test range of dates. Return date that is free.
