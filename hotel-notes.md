@@ -10,7 +10,7 @@ test 2: make booking on above free room
   --> update the room matrix
   
   +++++++++++++++
-  
+
 check common values in 2 arrays:
 
 x = [1, 2, 4]
@@ -30,6 +30,15 @@ need to subtract a day as checkout date -> guest not staying
 
 ++++++++++++
 
+hotel.rb:
+
+  # @room is an object.
+      # loop through each object where :room_type is @room_type (in our case)
+      # then call the  room.check_rooms_free , which takes a date range, 
+      #  so pass it @range = {checkin_date: @checkin_date, checkout_date: @checkout_date }
+      #  if it returns an empty array, that's the one you want: exit and return
+      #  else false: no available rooms
+      #   .nil?
 
 
 

@@ -45,8 +45,7 @@ class BookingTest < MiniTest::Test
     assert_equal('2016-03-05', @booking_1.checkout_date)
   end
 
-  # def test_find_first_free_room
-  #   assert_equal()
-  # end
+ 
+
 
 end 
