@@ -18,7 +18,7 @@ todo
     - has name, contact details (ie address/phone etc.)
     - has room type
     - has booked days
-    - is with partner?
+    - is with guest?  ie double room with 2 occupants
 
     - is currently booked in
       - has room number?
