@@ -30,7 +30,11 @@ booking on dates where no rooms free part of the time
 
 cancellations
 accumulation of fees for bookings
+-------
 
+version 2
+
+hotel, bookings, rooms, customers
 
 
 
