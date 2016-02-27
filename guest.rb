@@ -1,10 +1,15 @@
 class Guest
-  attr_accessor :room_type
+    
   def initialize(params)
-    @room_type = params[:room_type]
+    @guest_name = params[:name]
+    @guest_contact = params[:contact]
   end
 
-  def get_room_type
-    @room_type
+  def get_guest_name
+    @guest_name
+  end
+
+  def get_contact
+    @guest_contact
   end
 end
