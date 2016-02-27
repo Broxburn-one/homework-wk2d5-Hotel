@@ -36,7 +36,7 @@ version 2
 
 hotel, bookings, rooms, customers
 
-
+checkin and checkout dates are a hash
 
 
 

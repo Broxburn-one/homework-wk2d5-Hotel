@@ -13,11 +13,11 @@ class GuestTest < MiniTest::Test
   end
 
     def test_guest_has_name
-      assert_equal('Fred Mertz', @guest_1.get_guest_name())
+      assert_equal('Fred Mertz', @guest_1.guest_name())
     end
 
     def test_guest_has_contact
-      assert_equal("0141-222-2332", @guest_2.get_contact)
+      assert_equal("0141-222-2332", @guest_2.guest_contact)
     end
 
 
