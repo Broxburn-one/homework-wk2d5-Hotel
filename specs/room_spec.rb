@@ -22,12 +22,17 @@ class RoomTest < MiniTest::Test
       assert_equal(35, @room_1.rate)
     end
 
-    def test_room_free_on_dates
+    def test_room_not_free_on_dates
+        #  returns empty array if no common dates; returns the dates unavailable in the array
       date_range = {checkin_date: '2016-02-28', checkout_date: '2016-02-29'}
-      assert_equal([], @hotel.check_rooms_free(date_range))
+      assert_equal(['2016-02-28'], @room_1.check_rooms_free(date_range))
     end
 
-
+    def test_room_free_on_dates
+        #  returns empty array if no common dates; returns the dates unavailable in the array
+      date_range = {checkin_date: '2016-02-29', checkout_date: '2016-03-02'}
+      assert_equal([], @room_1.check_rooms_free(date_range))
+    end
 
 
     # def test_room_free_on_dates

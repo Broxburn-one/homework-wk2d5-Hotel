@@ -23,7 +23,8 @@ class BookingTest < MiniTest::Test
 
     @booking_1 = Booking.new({guests: [@guest_1, @guest_2], room_no: 6, checkin_date: '2016-03-03', checkout_date: '2016-03-05'})
 
-
+    @rooms = [@room_1, @room_2, @room_3, @room_4, @room_5, @room_6]
+    @hotel = Hotel.new(@rooms)
 
 
   end
@@ -44,8 +45,8 @@ class BookingTest < MiniTest::Test
     assert_equal('2016-03-05', @booking_1.checkout_date)
   end
 
-  def test_find_first_free_room
-    assert_equal()
-  end
+  # def test_find_first_free_room
+  #   assert_equal()
+  # end
 
 end 
