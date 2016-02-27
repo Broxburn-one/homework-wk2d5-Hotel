@@ -11,6 +11,19 @@ class Room
   #   return @rate
   # end
 
+  def check_rooms_free(date_range)
+    @check_in = date_range[:check_in]
+    @check_out = date_range[:check_out]
+    
+  end
+
+
+
+
+
+
+
+
   def room_free_on_dates(dates_to_check)
     #  test range of dates. Return date that is free.
     return dates_to_check - @dates_booked
