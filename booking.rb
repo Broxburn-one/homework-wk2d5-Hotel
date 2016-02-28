@@ -16,6 +16,15 @@ class Booking
     return guest_names
   end
 
+  def get_guest_invoice
+    # days_booked = @checkout_date - @checkin_date
+    # invoice = @room_no.rate * days_booked
+    # puts "result: #{DateTime.parse(@checkout_date).kind_of?(Date)}"
+    days_booked = DateTime.parse(@checkout_date) - DateTime.parse(@checkin_date)
+    return @room_no.rate * days_booked
+
+    # return invoice
+  end
  
 
 end

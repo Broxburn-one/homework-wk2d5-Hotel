@@ -38,5 +38,15 @@ class HotelTest < MiniTest::Test
       assert_equal(false, @hotel.find_first_avail_room(desired_dates))
     end
 
+    def test_get_total_revenue
+      # can do 2 ways: i. all rooms booked * cost of each room; or rooms booked up to today's date then total
+      #  loop through hotel array of rooms and for each room (on booking class?) 
+    end
+
+
+
+
+
+
 
 end

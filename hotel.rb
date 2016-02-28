@@ -12,14 +12,14 @@ class Hotel
 
     @rooms.select! do |room| 
       if room.room_type == @room_type
-       if (room.check_rooms_free({checkin_date: @checkin_date, checkout_date: @checkout_date })) == []
+        if (room.check_rooms_free({checkin_date: @checkin_date, checkout_date: @checkout_date })) == []
             return room 
         end
        # print "result: #{room.room_type}"
       end
     end
 
-  return false
+    return false
    
   end
     

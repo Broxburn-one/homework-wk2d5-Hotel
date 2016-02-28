@@ -3,6 +3,7 @@ require('date')
 require_relative('../booking')
 require_relative('../guest')
 require_relative('../room')
+require_relative('../hotel')
 
 class BookingTest < MiniTest::Test
 
@@ -21,11 +22,10 @@ class BookingTest < MiniTest::Test
     @guest_3 = Guest.new({name: 'Curly', contact: '0121-222-2332'})
     @guest_4 = Guest.new({name: 'Moe', contact: '01223-222-2332'})
 
-    @booking_1 = Booking.new({guests: [@guest_1, @guest_2], room_no: 6, checkin_date: '2016-03-03', checkout_date: '2016-03-05'})
+    @booking_1 = Booking.new({guests: [@guest_1, @guest_2], room_no: @room_6, checkin_date: '2016-03-03', checkout_date: '2016-03-05'})
 
     @rooms = [@room_1, @room_2, @room_3, @room_4, @room_5, @room_6]
     @hotel = Hotel.new(@rooms)
-
 
   end
 
@@ -34,7 +34,7 @@ class BookingTest < MiniTest::Test
   end
 
   def test_booked_room_no
-    assert_equal(6, @booking_1.room_no)
+    assert_equal(@room_6, @booking_1.room_no)
   end
 
   def test_get_checkin_date
@@ -45,6 +45,9 @@ class BookingTest < MiniTest::Test
     assert_equal('2016-03-05', @booking_1.checkout_date)
   end
 
+  def test_get_guest_invoice
+    assert_equal(140, @booking_1.get_guest_invoice)
+  end
  
 
 
