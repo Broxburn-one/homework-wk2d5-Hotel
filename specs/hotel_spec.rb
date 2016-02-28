@@ -40,7 +40,9 @@ class HotelTest < MiniTest::Test
 
     def test_get_total_revenue
       # can do 2 ways: i. all rooms booked * cost of each room; or rooms booked up to today's date then total
-      #  loop through hotel array of rooms and for each room (on booking class?) 
+      #  spec says not to bother about date so just get total days booked in each room mult by rate.
+      #  room_1: 3 * 35; room_2: 1 * 35; room_3: 3 * 35; room_4: 3 * 70; room_5: 5 * 70;  room_6: 1 * 70 => 875 
+        assert_equal(875, @hotel.get_total_revenue)
     end
 
 

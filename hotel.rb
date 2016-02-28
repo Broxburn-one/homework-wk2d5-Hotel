@@ -18,9 +18,16 @@ class Hotel
        # print "result: #{room.room_type}"
       end
     end
-
     return false
-   
+  end
+
+  def get_total_revenue
+    #  @room.get_tatal_days_booked_for_room * @room.room_rate
+    total_revenue = 0
+    @rooms.each do |room|
+      total_revenue += (room.get_total_days_booked_for_room.to_i * room.rate.to_i)
+    end
+    return total_revenue
   end
     
 

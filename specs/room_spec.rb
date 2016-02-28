@@ -37,6 +37,10 @@ class RoomTest < MiniTest::Test
     def test_room_type
         assert_equal('single', @room_1.room_type)
     end
+
+    def test_get_total_days_booked_for_room
+        assert_equal(3, @room_3.get_total_days_booked_for_room)
+    end
   
 
 
