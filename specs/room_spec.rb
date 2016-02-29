@@ -42,26 +42,8 @@ class RoomTest < MiniTest::Test
         assert_equal(3, @room_3.get_total_days_booked_for_room)
     end
   
-
-
-
-
-
-
-
-    # def test_room_free_on_dates
-    #   # today = DateTime.now.to_date
-    #   dates_to_check = ['2016-02-28', '2016-02-29']
-    #   assert_equal(['2016-02-29'], @room_1.room_free_on_dates(dates_to_check))
-    # end
-
-
-
-    # def test_book_a_free_room
-    #   dates_to_book = ['2016-03-01', '2016-03-02', '2016-03-03']
-    #   assert_equal([], @room_1.book_a_room(dates_to_book))
-    # end
-
-  
+    def test_get_dates_booked
+        assert_equal(['2016-02-26', '2016-02-27', '2016-02-28'], @room_1.dates_booked)
+    end
 
 end

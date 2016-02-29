@@ -38,10 +38,10 @@ To Do
 
 
 
-report on occupancy
-revenue of hotel (ignore dates)
-prevent overfilling of hotel
+report on occupancy  ->  how many guests and how many rooms booked   
+revenue of hotel (ignore dates)   ok
+prevent overfilling of hotel   - covered by check of whether room booked/free or not
 CHECKOUT
-cancel
+cancel booking
 
 

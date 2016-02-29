@@ -6,10 +6,12 @@ class GuestTest < MiniTest::Test
   def setup  
     # @guest_1 = Guest.new({room_type: 'single', has_guest: false})
     # @guest_2 = Guest.new({room_type: 'double', has_guest: true})
-      @guest_1 = Guest.new({name: 'Fred Mertz', contact: '0141-222-2332'})
-      @guest_2 = Guest.new({name: 'Ethel Mertz', contact: '0141-222-2332'})
-      @guest_3 = Guest.new({name: 'Curly', contact: '0121-222-2332'})
-      @guest_3 = Guest.new({name: 'Moe', contact: '01223-222-2332'})
+    @guest_1 = Guest.new({name: 'Fred Mertz', contact: '0141-222-2332'})
+    @guest_2 = Guest.new({name: 'Ethel Mertz', contact: '0141-222-2332'})
+    @guest_3 = Guest.new({name: 'Curly', contact: '0121-222-2332'})
+    @guest_4 = Guest.new({name: 'Moe', contact: '01223-222-2332'})
+    @guest_5 = Guest.new({name: 'Larry', contact: '01223-222-2332'})
+    @guest_6 = Guest.new({name: 'Jerrt', contact: '01223-222-2332'})
   end
 
     def test_guest_has_name

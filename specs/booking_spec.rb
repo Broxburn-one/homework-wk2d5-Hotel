@@ -21,16 +21,26 @@ class BookingTest < MiniTest::Test
     @guest_2 = Guest.new({name: 'Ethel Mertz', contact: '0141-222-2332'})
     @guest_3 = Guest.new({name: 'Curly', contact: '0121-222-2332'})
     @guest_4 = Guest.new({name: 'Moe', contact: '01223-222-2332'})
+    @guest_5 = Guest.new({name: 'Larry', contact: '01223-222-2332'})
+    @guest_6 = Guest.new({name: 'Jerrt', contact: '01223-222-2332'})
+
 
     @booking_1 = Booking.new({guests: [@guest_1, @guest_2], room_no: @room_6, checkin_date: '2016-03-03', checkout_date: '2016-03-05'})
 
     @rooms = [@room_1, @room_2, @room_3, @room_4, @room_5, @room_6]
+
     @hotel = Hotel.new(@rooms)
+
+
 
   end
 
   def test_booked_in_guests
     assert_equal(['Fred Mertz', 'Ethel Mertz'], @booking_1.get_booked_in_guests)
+  end
+
+  def test_count_booked_in_guests
+    assert_equal(2, @booking_1.count_booked_in_guests)
   end
 
   def test_booked_room_no
@@ -48,7 +58,5 @@ class BookingTest < MiniTest::Test
   def test_get_guest_invoice
     assert_equal(140, @booking_1.get_guest_invoice)
   end
- 
-
 
 end 

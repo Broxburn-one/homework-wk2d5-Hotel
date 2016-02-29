@@ -22,5 +22,8 @@ class Booking
     return @room_no.rate * days_booked
   end
  
+  def count_booked_in_guests
+    @guests.size
+  end
 
 end

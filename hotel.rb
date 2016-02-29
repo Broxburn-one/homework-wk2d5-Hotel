@@ -15,7 +15,7 @@ class Hotel
         if (room.check_rooms_free({checkin_date: @checkin_date, checkout_date: @checkout_date })) == []
             return room 
         end
-       # print "result: #{room.room_type}"
+       # print "result: #{room.room_type}"   for debug
       end
     end
     return false
@@ -30,5 +30,27 @@ class Hotel
     return total_revenue
   end
     
+  def num_booked_rooms(day)
+    # this gets rooms booked on a partic day. Need then to search bookings for how many guests.
+    rooms_booked = 0
+    
+    @rooms.each do |room|
+      rooms_booked += 1 if room.dates_booked.include?(day)
+    end
+    return rooms_booked
+  end
+
+  # def num_booked_guests_today(day, bookings)
+  #   # loop thru bookings. For today's date sum nr guests and nr rooms booked
+  #   tot_guests = 0
+  #    bookings.each do |booking|
+  #      if booking.room_no.dates_booked.include?(day)
+  #         tot_guests += booking.count_booked_in_guests
+  #       end
+  #    end
+  #    return tot_guests
+  # end
+
+
 
 end
