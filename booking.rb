@@ -26,4 +26,10 @@ class Booking
     @guests.size
   end
 
+  def get_booked_days()
+    booking_range = []
+    booking_range=*(@checkin_date...@checkout_date)
+    return booking_range
+  end
+
 end

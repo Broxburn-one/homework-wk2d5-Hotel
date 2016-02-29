@@ -40,16 +40,17 @@ class Hotel
     return rooms_booked
   end
 
-  # def num_booked_guests_today(day, bookings)
-  #   # loop thru bookings. For today's date sum nr guests and nr rooms booked
-  #   tot_guests = 0
-  #    bookings.each do |booking|
-  #      if booking.room_no.dates_booked.include?(day)
-  #         tot_guests += booking.count_booked_in_guests
-  #       end
-  #    end
-  #    return tot_guests
-  # end
+  def num_booked_guests_today(day, bookings)
+    # loop thru bookings. For today's date sum nr guests and nr rooms booked
+    tot_guests = 0
+     bookings.each do |booking|
+       # if booking.room_no.dates_booked.include?(day)
+       if booking.get_booked_days.include?(day)
+          tot_guests += booking.count_booked_in_guests
+        end
+     end
+     return tot_guests
+  end
 
 
 

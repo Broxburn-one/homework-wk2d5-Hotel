@@ -73,10 +73,10 @@ class HotelTest < MiniTest::Test
       assert_equal(5, @hotel.num_booked_rooms(today))
     end
 
-    # def test_get_num_booked_guests_today
-    #   today = '2016-02-26'
-    #   assert_equal(5, @hotel.num_booked_guests_today(today, @bookings))
-    # end
+    def test_get_num_booked_guests_today
+      today = '2016-02-26'
+      assert_equal(5, @hotel.num_booked_guests_today(today, @bookings))
+    end
 
 
 

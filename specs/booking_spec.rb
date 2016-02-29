@@ -59,4 +59,9 @@ class BookingTest < MiniTest::Test
     assert_equal(140, @booking_1.get_guest_invoice)
   end
 
+  def test_get_booked_days
+#  input booking date range and return array list of dates.
+    assert_equal(['2016-03-03', '2016-03-04'], @booking_1.get_booked_days())
+  end
+
 end 
